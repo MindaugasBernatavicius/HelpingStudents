@@ -36,4 +36,26 @@ CREATE TABLE IF NOT EXISTS Produktai (
 	FOREIGN KEY (Produktų_kainos_ID) REFERENCES Produktų_kainos(ID)
 ) ENGINE=INNODB;
 
+CREATE TABLE IF NOT EXISTS Klientai (
+	ID INT(11) AUTO_INCREMENT,
+	Vardas VARCHAR(20),
+	Pavardė VARCHAR(20),
+	Adresas VARCHAR(60),
+	Telefonas VARCHAR(20),
+	PRIMARY KEY (ID)
+) ENGINE=INNODB;
+
+CREATE TABLE IF NOT EXISTS Pirkimai (
+	ID INT(11) AUTO_INCREMENT,
+	Produktai_ID INT(11),
+	Kiekis INT(11),
+	Kaina FLOAT(8,2),
+	Pvm_dydis FLOAT(5,2),
+	Klientai_ID INT(11),
+	Pirkimo_data DATETIME,
+	PRIMARY KEY (ID),
+	FOREIGN KEY (Produktai_ID) REFERENCES Produktai(ID),
+	FOREIGN KEY (Klientai_ID) REFERENCES Klientai(ID)
+) ENGINE=INNODB;
+
 -- SELECT * FROM Dizaineriai;
