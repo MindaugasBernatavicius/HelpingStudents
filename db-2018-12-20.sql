@@ -1,3 +1,5 @@
+--------- Produktų_kategorijos -------------
+
 CREATE TABLE IF NOT EXISTS Produktų_kategorijos (
 	ID INT(11) AUTO_INCREMENT,
 	Kodas CHAR(4),
@@ -5,6 +7,16 @@ CREATE TABLE IF NOT EXISTS Produktų_kategorijos (
 	Aprašymas TEXT,
 	PRIMARY KEY (ID)
 ) ENGINE=INNODB;
+
+INSERT INTO `test_schema`.`Produktų_kategorijos`
+	(`Kodas`,`Pavadinimas`,`Aprašymas`)
+VALUES
+	(0400, 'Suknelė', 'Blah1'),
+	(0805, 'Kelnės', 'Blah2'),
+	(0842, 'Marškiniai', 'Blah3'),
+	(0805, 'Kelnės', 'Blah4');
+
+----------------------------------------
 
 CREATE TABLE IF NOT EXISTS Dizaineriai (
 	ID INT(11) AUTO_INCREMENT,
