@@ -60,7 +60,16 @@ ALTER TABLE `test_schema`.`Produktų_kainos`
 	ALTER `Kainos_galiojimo_pradžia` DROP DEFAULT,
 	ALTER `Pvm_dydis` DROP DEFAULT;
 	
+INSERT INTO `test_schema`.`Produktų_kainos`
+	(`Bazinė_kaina`,`Kainos_galiojimo_pradžia`, `Kainos_galiojimo_pabaiga`, `Pvm_dydis`)
+VALUES
+	(150, '2018-12-18 13:17:17', NULL, 21.0),
+	(200, '2018-12-11 09:10:17', NULL, 18.0),
+	(208, '2018-12-10 19:10:17', NULL, 21.0),
+	(15, '2018-11-10 19:10:17', NULL, 21.0);
+	
 ----------------------------------------
+--------------- Produktai --------------
 
 CREATE TABLE IF NOT EXISTS Produktai (
 	ID INT(11) AUTO_INCREMENT,
@@ -77,6 +86,9 @@ CREATE TABLE IF NOT EXISTS Produktai (
 
 ALTER TABLE Produktai
 	ADD COLUMN Kodas CHAR(4) AFTER ID;
+	
+----------------------------------------
+--------------- Klientai ---------------
 
 CREATE TABLE IF NOT EXISTS Klientai (
 	ID INT(11) AUTO_INCREMENT,
@@ -86,6 +98,9 @@ CREATE TABLE IF NOT EXISTS Klientai (
 	Telefonas VARCHAR(20),
 	PRIMARY KEY (ID)
 ) ENGINE=INNODB DEFAULT CHARSET=utf8;
+
+----------------------------------------
+--------------- Pirkimai ---------------
 
 CREATE TABLE IF NOT EXISTS Pirkimai (
 	ID INT(11) AUTO_INCREMENT,
@@ -100,4 +115,3 @@ CREATE TABLE IF NOT EXISTS Pirkimai (
 	FOREIGN KEY (Klientai_ID) REFERENCES Klientai(ID)
 ) ENGINE=INNODB DEFAULT CHARSET=utf8;
 
--- SELECT * FROM Dizaineriai;
