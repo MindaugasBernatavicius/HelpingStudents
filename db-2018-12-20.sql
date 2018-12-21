@@ -58,7 +58,6 @@ ALTER TABLE `test_schema`.`Produktų_kainos`
 ALTER TABLE `test_schema`.`Produktų_kainos`
 	ALTER `Bazinė_kaina` DROP DEFAULT,
 	ALTER `Kainos_galiojimo_pradžia` DROP DEFAULT,
-	ALTER `Kainos_galiojimo_pabaiga` DROP DEFAULT,
 	ALTER `Pvm_dydis` DROP DEFAULT;
 	
 ----------------------------------------
