@@ -1,10 +1,10 @@
 --------- Dublis 2 ---------------------
 --------- Klientas ---------------------
 
-CREATE TABLE Klientas (
+CREATE TABLE IF NOT EXISTS Klientas (
 	ID int(11) NOT NULL AUTO_INCREMENT,
-	Vardas varchar(20) DEFAULT NULL,
-	Pavardė varchar(20) DEFAULT NULL,
+	Vardas varchar(20) NOT NULL,
+	Pavardė varchar(20) NOT NULL,
 	PRIMARY KEY (ID)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -17,7 +17,7 @@ VALUES
 ----------------------------------------
 --------- Produktas --------------------
 
-CREATE TABLE Produktas (
+CREATE TABLE IF NOT EXISTS Produktas (
 	ID int(11) NOT NULL AUTO_INCREMENT,
 	Kodas char(4) NOT NULL,
 	ProduktoTipoID int(11) NOT NULL,
@@ -40,7 +40,7 @@ VALUES
 ----------------------------------------
 --------- Sąskaita ---------------------
 
-CREATE IF NOT EXISTS TABLE Sąskaita (
+CREATE TABLE IF NOT EXISTS Sąskaita (
 	ID int(11) NOT NULL AUTO_INCREMENT,
 	KlientoID int(11) NOT NULL,
 	Data datetime NOT NULL,
@@ -59,11 +59,11 @@ VALUES
 ----------------------------------------
 --------- ProduktoTipas ----------------
 
-CREATE TABLE ProduktoTipas (
-  ID int(11) NOT NULL AUTO_INCREMENT,
-  Kodas char(4) NOT NULL,
-  Pavadinimas varchar(60) NOT NULL,
-  PRIMARY KEY (ID)
+CREATE TABLE IF NOT EXISTS ProduktoTipas (
+	ID int(11) NOT NULL AUTO_INCREMENT,
+	Kodas char(4) NOT NULL,
+	Pavadinimas varchar(60) NOT NULL,
+	PRIMARY KEY (ID)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 	
 INSERT INTO ProduktoTipas
@@ -75,7 +75,28 @@ VALUES
 	('0805','Kelnės');
 
 ----------------------------------------
-----------------------------------------
+----------- SąskaitosDetalės -----------
+
+CREATE TABLE IF NOT EXISTS SąskaitosDetalės (
+	ID int(11) NOT NULL AUTO_INCREMENT,
+	SąskaitosID int(11) NOT NULL,
+	ProduktasID int(11) NOT NULL,
+	KainaBeNuolaidos float(8,2) NOT NULL,
+	Nuolaida float(8,2) DEFAULT NULL,
+	PardavimoKaina float(8,2) NOT NULL,
+	Kiekis int(8) NOT NULL,
+	PRIMARY KEY (ID),
+	FOREIGN KEY (SąskaitosID) REFERENCES Sąskaita (ID),
+	FOREIGN KEY (ProduktasID) REFERENCES Produktas (ID)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO SąskaitosDetalės
+	(SąskaitosID, ProduktasID, KainaBeNuolaidos, Nuolaida, PardavimoKaina, Kiekis)
+VALUES
+	(1, 1, 7100, 100, 7000, 1),
+	(1, 2, 5600, 100, 5500, 2),
+	(1, 3, 1850, 50, 1800, 3),
+	(1, 3, 3560, 60, 3500, 4);
 
 
 --------- Dublis 1 ---------------------
