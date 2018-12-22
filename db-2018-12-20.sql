@@ -1,4 +1,84 @@
+--------- Dublis 2 ---------------------
+--------- Klientas ---------------------
+
+CREATE TABLE Klientas (
+	ID int(11) NOT NULL AUTO_INCREMENT,
+	Vardas varchar(20) DEFAULT NULL,
+	Pavardė varchar(20) DEFAULT NULL,
+	PRIMARY KEY (ID)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO Klientas
+	()
+VALUES
+	(1,'Eliza','Jonaitienė'),
+	(2,'Tomas','Kruzas');
+	
 ----------------------------------------
+--------- Produktas --------------------
+
+CREATE TABLE Produktas (
+	ID int(11) NOT NULL AUTO_INCREMENT,
+	Kodas char(4) NOT NULL,
+	ProduktoTipoID int(11) NOT NULL,
+	DizainerioID int(11) NOT NULL,
+	Pavadinimas varchar(60) NOT NULL,
+	Kaina float(8,2) NOT NULL,
+	PRIMARY KEY (ID),
+	FOREIGN KEY (ProduktoTipoID) REFERENCES ProduktoTipas (ID),
+	FOREIGN KEY (DizainerioID) REFERENCES Dizaineris (ID)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO Produktas
+	(Kodas, ProduktoTipoID, DizainerioID, Pavadinimas, Kaina)
+VALUES
+	('0001', 1, 1, 'Škurlys', 6000.00),
+	('0200', 2, 2, 'Kelnės X', 5000.00),
+	('0230', 3, 3, 'Hawaii', 1500.00),
+	('0150', 2, 4, 'Oda123', 3000.00);
+	
+----------------------------------------
+--------- Sąskaita ---------------------
+
+CREATE IF NOT EXISTS TABLE Sąskaita (
+	ID int(11) NOT NULL AUTO_INCREMENT,
+	KlientoID int(11) NOT NULL,
+	Data datetime NOT NULL,
+	VisoKaina float(8,2) NOT NULL,
+	Pvm float(5,2) NOT NULL,
+	VisoBePvm float(8,2) NOT NULL,
+	PRIMARY KEY (ID),
+	FOREIGN KEY (KlientoID) REFERENCES Klientas (ID)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO Sąskaita 
+	(KlientoID, Data, VisoKaina, Pvm, VisoBePvm);
+VALUES
+	(1, '2018-12-11 19:10:17', 7000.00, 9.99, 6200.00);
+	
+----------------------------------------
+--------- ProduktoTipas ----------------
+
+CREATE TABLE ProduktoTipas (
+  ID int(11) NOT NULL AUTO_INCREMENT,
+  Kodas char(4) NOT NULL,
+  Pavadinimas varchar(60) NOT NULL,
+  PRIMARY KEY (ID)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+	
+INSERT INTO ProduktoTipas
+	(Kodas, Pavadinimas)
+VALUES 
+	('0400','Suknelė'),
+	('0805','Kelnės'),
+	('0842','Marškiniai'),
+	('0805','Kelnės');
+
+----------------------------------------
+----------------------------------------
+
+
+--------- Dublis 1 ---------------------
 --------- Produktų_kategorijos ---------
 
 CREATE TABLE IF NOT EXISTS Produktų_kategorijos (
