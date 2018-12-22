@@ -8,11 +8,15 @@ CREATE TABLE IF NOT EXISTS Klientas (
 	PRIMARY KEY (ID)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+ALTER TABLE Klientas
+	ADD COLUMN Adresas VARCHAR(60) AFTER Pavardė,
+	ADD COLUMN Telefonas VARCHAR(20) AFTER Adresas;
+
 INSERT INTO Klientas
-	()
+	(Vardas, Pavardė, Adresas, Telefonas)
 VALUES
-	(1,'Eliza','Jonaitienė'),
-	(2,'Tomas','Kruzas');
+	('Eliza','Jonaitienė', '123 - 1 Žalgirio g. Kaunas 47825', '86000000'),
+	('Tomas','Kruzas', 'Hollywood, Los Angeles', '870282996325');
 	
 ----------------------------------------
 --------- Produktas --------------------
