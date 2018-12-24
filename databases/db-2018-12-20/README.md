@@ -9,12 +9,12 @@ SELECT Produktas.Pavadinimas AS Produktas,
 	Sąskaita.Data AS PirkimoData,
 	Klientas.Vardas AS Vardas,
 	Klientas.Pavardė AS Pavardė,
-  Klientas.Adresas AS Adresas,
-  Klientas.Telefonas AS Telefonas
+  	Klientas.Adresas AS Adresas,
+  	Klientas.Telefonas AS Telefonas
 FROM SąskaitosDetalės 
-  JOIN Produktas ON SąskaitosDetalės.ProduktasID = Produktas.ID
-  JOIN Sąskaita ON SąskaitosDetalės.SąskaitosID = Sąskaita.ID
-  JOIN Klientas ON Sąskaita.KlientoID = Klientas.ID
-  JOIN ProduktoTipas ON Produktas.ProduktoTipoID = ProduktoTipas.ID
+  	JOIN Produktas ON SąskaitosDetalės.ProduktasID = Produktas.ID
+  	JOIN Sąskaita ON SąskaitosDetalės.SąskaitosID = Sąskaita.ID
+  	JOIN Klientas ON Sąskaita.KlientoID = Klientas.ID
+  	JOIN ProduktoTipas ON Produktas.ProduktoTipoID = ProduktoTipas.ID
 WHERE ProduktoTipas.Pavadinimas = "Suknelė";
 ```
