@@ -2,7 +2,7 @@
 
 
 2. Parašykite select tam kad gauti visus suknelių pardavimų duomenis (Produktas ir pirkimo informacija: Kaina, pirkimo data, kliento informacija.
-```
+```sql
 SELECT Produktas.Pavadinimas AS Produktas,
 	(SąskaitosDetalės.KainaBeNuolaidos / 
 		SąskaitosDetalės.Kiekis) AS Kaina,
