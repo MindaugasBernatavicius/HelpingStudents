@@ -1,0 +1,57 @@
+<!-- Author: Mindaugas Bernatavičius -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
+        <script type="text/javascript" async="true">
+            function callAjax() {
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        // jei requestas pavyko, sukonstruojame image tagą su pasirinktu img
+                        document.getElementById("error_field").innerHTML = "<img src=" + this.responseURL + "></img>";
+                    }
+                };
+                xhttp.open("GET", "https://www.jdoodle.com/static/images/jdoodle.png", true);
+                xhttp.send();
+            }
+
+            function formValidation(e) {
+                // neleidžiame formai persikrauti onSubmit
+                e.preventDefault();
+        
+                // pasiimame laukus
+                var firstname = document.getElementsByName('firstname');
+                var lastname = document.getElementsByName('lastname');
+        
+                // validacija
+                if(firstname[0].value.length == 0){
+                    document.getElementById('error_field').innerHTML = "Error blet!";
+                } else {
+                    // jei validacija praėjo, kviečiame ajax funkciją
+                    callAjax();
+                }
+            }
+        </script>
+        <style type="text/css">
+            .welcome {
+                color:green;
+                font-size:36px;
+                font-family:cursive;
+                text-align:center;
+                padding:20px;
+            }
+        </style>
+    </head>
+    <body>
+        <form id="myForm" onsubmit='formValidation(event)'>
+            First name:<br>
+            <input type="text" name="firstname"><br>
+            Last name:<br>
+            <input type="text" name="lastname"><br>
+            <p id="error_field"></p>
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>
