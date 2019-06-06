@@ -13,11 +13,6 @@
   - table headers (\<th\>): name, age, picture, balance, tags, registered, favoriteFruit.
   - add $1000 to each students balance.
   - add line numberings.
-  - img should display picture of a student.
+  - img should display picture of a student
   
-
-## Requirements:
-  - structured code, decomposed into functions. Comments required in appropriate places.
-  - use AJAX – (plain js or Jquery)
-  - js needs to be in another file (.js)
-  - add CSS styling for table.
+## d
