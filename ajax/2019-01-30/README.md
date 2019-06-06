@@ -1,8 +1,7 @@
 ## Task:
 - LoginForm html w/ two input fields: username, password and a submit button.
-- Submit Login
-  - On submit POST username and password to http://<>/api/login (username: "admin", password: "Password")
-  - On 403 response display user friendly error.
+- On submit POST username and password to http://<>/api/login (username: "admin", password: "Password")
+- On 403 response display user friendly error.
   
 ## On 200 response:
 - hide loginForm
