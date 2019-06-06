@@ -1,23 +1,22 @@
 Task:
-- LoginForm html w/ two input fields: username, password and a submit button.
-- Submit Login
-  - On submit POST username and password to http://<>/api/login (username: "admin", password: "Password")
-  - On 403 response display user friendly error.
+  - LoginForm html w/ two input fields: username, password and a submit button.
+  - Submit Login
+    - On submit POST username and password to http://<>/api/login (username: "admin", password: "Password")
+    - On 403 response display user friendly error.
   
 
 On 200 response:
-- hide loginForm
-- create <table>
-- display data from /api/students
-- on active students should be displayed
-- table headers (\<th\>): name, age, picture, balance, tags, registered, favoriteFruit.
-- add $1000 to each students balance.
-- add line numberings.
-- \<img\> should display picture of a student.
-
+  - hide loginForm
+  - create <table>
+  - display data from /api/students
+  - on active students should be displayed
+  - table headers (\<th\>): name, age, picture, balance, tags, registered, favoriteFruit.
+  - add $1000 to each students balance.
+  - add line numberings.
+  - \<img\> should display picture of a student.
 
 Requirements:
-- Structured code, decomposed into functions. Comments required in appropriate places.
-- Use AJAX – (plain js or Jquery)
-- Js needs to be in another file (.js)
-- Add CSS styling for table.
+  - Structured code, decomposed into functions. Comments required in appropriate places.
+  - Use AJAX – (plain js or Jquery)
+  - Js needs to be in another file (.js)
+  - Add CSS styling for table.
