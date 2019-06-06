@@ -14,7 +14,7 @@ On 200 response:
   - add $1000 to each students balance.
   - add line numberings.
   - \<img\> should display picture of a student.
-
+  
 Requirements:
   - Structured code, decomposed into functions. Comments required in appropriate places.
   - Use AJAX – (plain js or Jquery)
