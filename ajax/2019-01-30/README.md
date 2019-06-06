@@ -4,17 +4,17 @@
 - On 403 response display user friendly error.
   
 ## On 200 response:
-- hide loginForm
-- create <table>
-- display data from /api/students
-- on active students should be displayed
-- table headers (\<th\>): name, age, picture, balance, tags, registered, favoriteFruit.
-- add $1000 to each students balance.
-- img should display picture of a student.
-- add line numberings.
+- Hide loginForm
+- Create <table>
+- Display data from /api/students
+- On active students should be displayed
+- Table headers (\<th\>): name, age, picture, balance, tags, registered, favoriteFruit.
+- Add $1000 to each students balance.
+- Img should display picture of a student.
+- Add line numberings.
   
 ## Requirements:
-- structured code, decomposed into functions. Comments required in appropriate places.
-- use AJAX – (plain js or Jquery)
-- js needs to be in another file (.js)
-- add CSS styling for table.
+- Structured code, decomposed into functions. Comments required in appropriate places.
+- Use AJAX – (plain js or Jquery)
+- Js needs to be in another file (.js)
+- Add CSS styling for table.
