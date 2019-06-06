@@ -1,20 +1,21 @@
 Task:
 - LoginForm html w/ two input fields: username, password and a submit button.
 - Submit Login
-  - On submit POST username &amp; password to /api/login (username: "admin", password: "Password")
+  - On submit POST username and password to http://<>/api/login (username: "admin", password: "Password")
   - On 403 response display user friendly error.
-  - On 200 response :
-    - paslėpti loginForm
-    - sukurti lentelę (<table>)
-- istraukti duomenis is /api/studentai
-- ideti i lentele tik aktyvius studentus.
-- Lenteles lauku antrastes (<th>): name, age, picture, balance, tags, registered, favoriteFruit.
-- Prideti po 1000 $ kiekvienam studentui prie jo balanso.
-- Sunumeruoti eilutes
-- "Picture" stulpelis turetu parodyti studento paveiksliuką <img>;
+  
+On 200 response :
+- hide loginForm
+- create <table>
+- display data from /api/students
+- on active students should be displayed
+- table headers (<th>): name, age, picture, balance, tags, registered, favoriteFruit.
+- add $1000 to each students balance.
+- add line numberings.
+- <img> should display picture of a student.
 
-Reikalavimai:
-- Peteikti gražų kodą, iskaidytą į funkcijas. Naudot komentarus kur reikia.
+Requirements:
+- Structured code, decomposed into functions. Comments required in appropriate places.
 - Use AJAX – (plain js or Jquery)
-- Javasriptas turi buti atskirame faile (.js)
+- Js needs to be in another file (.js)
 - Add CSS styling for table
