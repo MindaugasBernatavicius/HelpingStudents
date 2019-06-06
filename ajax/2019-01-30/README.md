@@ -1,6 +1,6 @@
-Užduotis
-LoginForm
- Html- sukurti du inputs (username&amp;password) ir submit button.
+Užduotis:
+- LoginForm
+  - Html- sukurti du inputs (username&amp;password) ir submit button.
 Submit Login
  On submit POST username &amp; password to http://kitmjavascript.azurewebsites.net/api/login
 (username:“admin“, password:“Password“)
