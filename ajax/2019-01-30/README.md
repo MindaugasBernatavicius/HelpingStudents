@@ -4,7 +4,7 @@ Task:
   - On submit POST username and password to http://<>/api/login (username: "admin", password: "Password")
   - On 403 response display user friendly error.
   
-On 200 response :
+On 200 response:
 - hide loginForm
 - create <table>
 - display data from /api/students
