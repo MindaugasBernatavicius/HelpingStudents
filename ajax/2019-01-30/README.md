@@ -14,7 +14,7 @@
   - add $1000 to each students balance.
   - add line numberings.
   - img should display picture of a student.
-
+  
 
 ## Requirements:
   - structured code, decomposed into functions. Comments required in appropriate places.
