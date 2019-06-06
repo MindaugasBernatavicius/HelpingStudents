@@ -4,6 +4,7 @@ Task:
   - On submit POST username and password to http://<>/api/login (username: "admin", password: "Password")
   - On 403 response display user friendly error.
   
+
 On 200 response:
 - hide loginForm
 - create <table>
@@ -13,6 +14,7 @@ On 200 response:
 - add $1000 to each students balance.
 - add line numberings.
 - \<img\> should display picture of a student.
+
 
 Requirements:
 - Structured code, decomposed into functions. Comments required in appropriate places.
