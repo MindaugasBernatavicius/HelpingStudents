@@ -1,11 +1,11 @@
-Task:
+# Task:
   - LoginForm html w/ two input fields: username, password and a submit button.
   - Submit Login
     - On submit POST username and password to http://<>/api/login (username: "admin", password: "Password")
     - On 403 response display user friendly error.
   
 
-On 200 response:
+# On 200 response:
   - hide loginForm
   - create <table>
   - display data from /api/students
@@ -16,7 +16,7 @@ On 200 response:
   - \<img\> should display picture of a student.
 
 
-Requirements:
+# Requirements:
   - Structured code, decomposed into functions. Comments required in appropriate places.
   - Use AJAX – (plain js or Jquery)
   - Js needs to be in another file (.js)
