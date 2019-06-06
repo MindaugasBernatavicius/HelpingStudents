@@ -5,7 +5,7 @@
   - On 403 response display user friendly error.
   
 ## On 200 response:
--- hide loginForm
+- hide loginForm
 - create <table>
 - display data from /api/students
 - on active students should be displayed
@@ -13,7 +13,7 @@
 - add $1000 to each students balance.
 - img should display picture of a student.
 - add line numberings.
-
+  
 ## Requirements:
 - structured code, decomposed into functions. Comments required in appropriate places.
 - use AJAX – (plain js or Jquery)
