@@ -1,3 +1,15 @@
+# Virgis,9
+# Saule,8
+# Jonas,10
+# Ona,7
+# Petras,8
+# Algis,6
+# Antanas,9
+# Svajunas,10
+# Arturas,7
+# Povilas,5
+# Andrius,6
+
 ########### PAGALBINĖS FUNKCIJOS ##########
 
 def vidurkis(pazymiai):
