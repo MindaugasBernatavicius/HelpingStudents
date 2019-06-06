@@ -1,10 +1,8 @@
 Užduotis:
-- LoginForm
-  - Html- sukurti du inputs (username&amp;password) ir submit button.
-Submit Login
- On submit POST username &amp; password to http://kitmjavascript.azurewebsites.net/api/login
-(username:“admin“, password:“Password“)
- On 403 response display user friendly error.
+- LoginForm: Html - sukurti du inputs (username, password) ir submit button.
+- Submit Login
+  - On submit POST username &amp; password to /api/login (username: "admin", password: "Password")
+  - On 403 response display user friendly error.
 
 On 200 response :
  paslėpti „loginForm”
