@@ -5,7 +5,7 @@
   - On 403 response display user friendly error.
   
 ## On 200 response:
-- hide loginForm
+-- hide loginForm
 - create <table>
 - display data from /api/students
 - on active students should be displayed
