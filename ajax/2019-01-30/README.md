@@ -13,8 +13,9 @@
   - on active students should be displayed
   - table headers (\<th\>): name, age, picture, balance, tags, registered, favoriteFruit.
   - add $1000 to each students balance.
+  - img should display picture of a student.
   - add line numberings.
-
+  
 
 
 ## Requirements:
