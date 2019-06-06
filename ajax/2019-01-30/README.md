@@ -1,8 +1,8 @@
 ## Task:
-  - LoginForm html w/ two input fields: username, password and a submit button.
-  - Submit Login
-    - On submit POST username and password to http://<>/api/login (username: "admin", password: "Password")
-    - On 403 response display user friendly error.
+- LoginForm html w/ two input fields: username, password and a submit button.
+- Submit Login
+  - On submit POST username and password to http://<>/api/login (username: "admin", password: "Password")
+  - On 403 response display user friendly error.
   
 ## On 200 response:
 - hide loginForm
@@ -15,7 +15,7 @@
 - add line numberings.
 
 ## Requirements:
-  - structured code, decomposed into functions. Comments required in appropriate places.
-  - use AJAX – (plain js or Jquery)
-  - js needs to be in another file (.js)
-  - add CSS styling for table.
+- structured code, decomposed into functions. Comments required in appropriate places.
+- use AJAX – (plain js or Jquery)
+- js needs to be in another file (.js)
+- add CSS styling for table.
