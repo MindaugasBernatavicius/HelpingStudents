@@ -20,4 +20,4 @@ Requirements:
 - Structured code, decomposed into functions. Comments required in appropriate places.
 - Use AJAX – (plain js or Jquery)
 - Js needs to be in another file (.js)
-- Add CSS styling for table
+- Add CSS styling for table.
