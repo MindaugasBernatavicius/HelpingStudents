@@ -13,7 +13,7 @@
   - table headers (\<th\>): name, age, picture, balance, tags, registered, favoriteFruit.
   - add $1000 to each students balance.
   - add line numberings.
-  - \<img\> should display picture of a student.
+  - img should display picture of a student.
 
 
 ## Requirements:
