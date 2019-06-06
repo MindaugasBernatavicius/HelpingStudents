@@ -9,10 +9,10 @@ On 200 response :
 - create <table>
 - display data from /api/students
 - on active students should be displayed
-- table headers (<th>): name, age, picture, balance, tags, registered, favoriteFruit.
+- table headers (\<th\>): name, age, picture, balance, tags, registered, favoriteFruit.
 - add $1000 to each students balance.
 - add line numberings.
-- <img> should display picture of a student.
+- \<img\> should display picture of a student.
 
 Requirements:
 - Structured code, decomposed into functions. Comments required in appropriate places.
